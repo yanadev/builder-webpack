@@ -1,0 +1,19 @@
+name: Main 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  install:
+
+    steps:
+      - name: install devDependencies
+      - run: npm install -D
+
+      - name: switch directories to template project
+      - run: cd ./test/smoke/template
+      
+      - name: install template project's dependencies
+      - run: npm install -D
