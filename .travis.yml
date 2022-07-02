@@ -1,15 +1,12 @@
 language: node_js
 
-# 不需要 sudo 权限
 sudo: false
 
-# 设置缓存目录
 cache:
   apt: true
-  directories: 
+  directories:
     - node_modules
 
-# 使用的 nodejs 的版本
 node_js: stable
 
 install:
