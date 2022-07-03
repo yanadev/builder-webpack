@@ -1,13 +1,24 @@
-name: Main 
+name: package
+
 on:
   push:
     branches: ["main"]
   pull_request:
+    branches: ["main"]
+
+
+  workflow_dispatch:
+
 
 jobs:
-  install:
+
+  build:
+    runs-on: ubuntu-latest
 
     steps:
+
+      - uses: actions/checkout@v1
+      
       - name: install devDependencies
       - run: npm install -D
 
