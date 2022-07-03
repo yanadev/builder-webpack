@@ -34,14 +34,14 @@ jobs:
           node-version: "18.X"
 
       - name: install dep
-        run: npm install -D
+        run: yarn install -D
         
       - name: switch to template project
         run: cd ./test/smoke/template
         
       - name: install template project dep
-        run: npm install -D
+        run: yarn install -D
         
       - name: run test scripts
-        run: npm test
+        run: yarn run test
         
