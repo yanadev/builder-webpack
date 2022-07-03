@@ -25,10 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: Cache
-        uses: actions/cache@v3.0.4
-        with:
-          path: node_modules
+
           
           
       - name: setup node.js environment
